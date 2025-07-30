@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="robot_name" default="fastbot_1"/>
+
+<!-- RPLIDAR A1 -->
+    <group>
+        <push-ros-namespace namespace="$(var robot_name)"/>
+        <include file="$(find-pkg-share fastbot_bringup)/launch/rplidar.launch.py">
+            <arg name="robot_name" value="$(var robot_name)"/>
+        </include>
+    </group> 
+</launch>

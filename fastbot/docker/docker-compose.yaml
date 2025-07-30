@@ -1,0 +1,26 @@
+name: fastbot_humble
+
+services:
+  fastbot-humble-container:
+    image: theconstructai/fastbot:student
+    pull_policy: always
+    privileged: true
+    network_mode: host
+    container_name: fastbot-student-humble
+    environment:
+      - ROBOT_NAME=fastbot
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - CYCLONEDDS_URI=/var/lib/theconstruct.rrl/cyclonedds.xml
+    group_add:
+      - "44"  # Video group GID
+    volumes: 
+      - /var/lib/theconstruct.rrl/cyclonedds.xml:/var/lib/theconstruct.rrl/cyclonedds.xml
+      - /dev:/dev
+      - /dev/video0:/dev/video0
+      - ./volumes/ros_entrypoint.sh:/ros_entrypoint.sh
+      - ./volumes/bringup.sh:/bringup.sh
+      - ./volumes/bringup.launch.xml:/root/ros2_ws/install/fastbot_bringup/share/fastbot_bringup/launch/bringup.launch.xml 
+      - ./volumes/raspicam_camera_info.yaml:/root/.ros/camera_info/mmal_service_16.1.yaml
+    entrypoint: /ros_entrypoint.sh
+    command: ["/bringup.sh"]
+    restart: always
