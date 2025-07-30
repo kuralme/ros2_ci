@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Check if Docker is installed
+if ! command -v docker &> /dev/null; then
+    echo "Docker is not installed. Installing now..."
+    sudo apt-get update
+    sudo apt-get install -y docker.io docker-compose
+    sudo service docker start
+
+    # Enable docker without sudo
+    sudo usermod -aG docker $USER
+    newgrp docker
+    sudo service docker restart
+
+    echo "Docker is installed successfully!"
+fi
+
 # Build docker image
 docker build -t fastbot-ros2-test .
 
