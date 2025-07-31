@@ -1,0 +1,3 @@
+[submodule "fastbot_waypoints"]
+	path = fastbot_waypoints
+	url = git@github.com:kuralme/fastbot_waypoints.git
