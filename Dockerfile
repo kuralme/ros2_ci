@@ -21,3 +21,4 @@ COPY ./fastbot_waypoints /colcon_ws/src/fastbot_waypoints
 RUN source /opt/ros/humble/setup.bash \
  && cd /colcon_ws \
  && colcon build
+WORKDIR /colcon_ws

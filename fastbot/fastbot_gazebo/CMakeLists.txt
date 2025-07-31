@@ -12,7 +12,7 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 install(
-  DIRECTORY launch worlds gazebo models
+  DIRECTORY launch worlds gazebo models test
   DESTINATION share/${PROJECT_NAME}
 )
 
