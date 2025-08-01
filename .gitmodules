@@ -1,3 +1,6 @@
 [submodule "fastbot_waypoints"]
 	path = fastbot_waypoints
 	url = git@github.com:kuralme/fastbot_waypoints.git
+[submodule "jenkins_ci_project"]
+	path = jenkins_ci_project
+	url = git@github.com:kuralme/jenkins_ci_project.git
