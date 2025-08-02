@@ -12,10 +12,22 @@ The build process will automatically install all necessary dependencies. However
 
 ## Getting Started
 
+### Workspace setup
+
+Clone this repository into your workspace and pull the required submodules.
+
+```bash
+git clone <this-repo-url>
+cd ros2_ci
+git submodule update --init --recursive
+```
+
+### Jenkins setup
+
 Use the provided installation script to set up and start Jenkins and the ROS CI pipeline. The script will handle the installation of all dependencies.
 
 ```bash
-cd webpage_ws
+cd jenkins_ci_project
 bash start_jenkins.sh
 ```
 
@@ -31,6 +43,6 @@ Login as \
 
 To trigger the build process, do a simple modification to this repository (like a small text file on Github) and create a **Pull Request**. The build process will automatically start once the PR is created and accepted.
 
-**Monitoring the Build Process**
+### Monitoring the Build Process
 
 As a guest user, you can monitor the status of the build job. Navigate to the **Dashboard** and select **FastbotWaypointsTest** on the list. Click on the ongoing job under build section to monitor the build process, provides view of the **Console Output** including logs for the Docker build, test execution, and results.
