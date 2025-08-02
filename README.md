@@ -12,7 +12,7 @@ The build process will automatically install all necessary dependencies. However
 
 ## Getting Started
 
-To get up and running with Jenkins and the ROS CI pipeline, use the provided installation script to set up and start Jenkins. The script will handle the installation of all necessary dependencies.
+Use the provided installation script to set up and start Jenkins and the ROS CI pipeline. The script will handle the installation of all dependencies.
 
 ```bash
 cd webpage_ws
