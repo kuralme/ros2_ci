@@ -45,4 +45,4 @@ To trigger the build process, do a simple modification to this repository (like 
 
 ### Monitoring the Build Process
 
-As a guest user, you can monitor the status of the build job. Navigate to the **Dashboard** and select **FastbotWaypointsTest** on the list. Click on the ongoing job under build section to monitor the build process, provides view of the **Console Output** including logs for the Docker build, test execution, and results.
+As a guest user, you can monitor the status of the build job. Navigate to the **Dashboard** and select **FastbotCITests** on the list. Click on the ongoing job under **Build Queue** section to monitor the build process, provides view under the **Console Output** including logs for the Docker build, test execution, and results.
